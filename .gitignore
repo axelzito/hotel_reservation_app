@@ -23,5 +23,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore DB files
+/config/mongoid.yml
+
 # Ignore IDE things
 .idea
