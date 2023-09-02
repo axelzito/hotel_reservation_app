@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Hotel
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -9,5 +11,5 @@ class Hotel
   field :email, type: String
   field :description, type: String
 
-  has_many :reservations, class_name: 'Reservation'
+  has_many :reservations, class_name: 'Reservation', dependent: :restrict_with_exception
 end

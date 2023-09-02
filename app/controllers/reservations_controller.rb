@@ -1,5 +1,6 @@
-class ReservationsController < ApplicationController
+# frozen_string_literal: true
 
+class ReservationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index

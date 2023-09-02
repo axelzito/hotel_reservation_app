@@ -1,0 +1,79 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2.2
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: true
+  EnforcedStyle: compact
+  SafeAutoCorrect: true
+  Exclude:
+    - config/**/*
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - db/**/*
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Exclude:
+    - db/migrate/*
+
+Metrics/ModuleLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Exclude:
+    - lib/tp/metadata.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+
+Metrics/ClassLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Exclude:
+    - app/dashboards/*
+
+Metrics/BlockLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Max: 70
+  Exclude:
+    - spec/**/*
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/SymbolConversion:
+  Enabled: false
+
+Lint/BooleanSymbol:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Rails/I18nLocaleAssignment:
+  Enabled: false
+
+Rails/I18nLocaleTexts:
+  Exclude:
+    - spec/**/*
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
