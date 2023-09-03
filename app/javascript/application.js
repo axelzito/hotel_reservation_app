@@ -7,6 +7,7 @@ import "bootstrap"
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require jquery
 //= require jquery_ujs
 //= require bootstrap-datepicker/core
 //= require_tree .
