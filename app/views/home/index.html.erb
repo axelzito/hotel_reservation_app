@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Bienvenido al Sistema de Reservas</h2>
+      <p>¡Aquí puedes gestionar tus reservas y hoteles de manera sencilla y eficiente!</p>
+      <p>En este sistema, tienes la capacidad de:</p>
+      <ul>
+        <li><strong>Crear Nuevos Hoteles:</strong> Si deseas agregar un nuevo hotel al sistema, selecciona la opción "Nuevo Hotel" en el menú.</li>
+        <li><strong>Ver y administrar Hoteles:</strong> Puedes ver una lista de los hoteles disponibles, así como agregar nuevos hoteles o editar los existentes.</li>
+      </ul>
+      <div class="text-center mt-4">
+        <%= link_to 'Ver Hoteles', hotels_path, class: 'btn btn-success btn-lg' %>
+      </div>
+      <br>
+      <ul>
+        <li><strong>Crear Nuevas Reservas:</strong> Si deseas realizar una nueva reserva, simplemente selecciona la opción "Nueva Reserva" en el menú.</li>
+        <li><strong>Ver y administrar Reservas:</strong> Puedes ver las reservas existentes, editar los detalles de una reserva o eliminar reservas si es necesario.</li>
+      </ul>
+      <div class="text-center mt-4">
+        <%= link_to 'Ver Reservas', reservations_path, class: 'btn btn-primary btn-lg mr-3' %>
+      </div>
+    </div>
+  </div>
+</div>
