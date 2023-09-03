@@ -1,0 +1,30 @@
+<h1 class="mb-4">Listado de Reservas</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="text-center">Nombre del Huésped</th>
+    <th class="text-center">Nombre del Hotel</th>
+    <th class="text-center">Check-in</th>
+    <th class="text-center">Check-out</th>
+    <th class="text-center">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @reservations.each do |reservation| %>
+    <tr>
+      <td class="text-center"><%= reservation.guest_name %></td>
+      <td class="text-center"><%= reservation.hotel&.name %></td>
+      <td class="text-center"><%= reservation.check_in.strftime('%d/%m/%Y') %></td>
+      <td class="text-center"><%= reservation.check_out.strftime('%d/%m/%Y') %></td>
+      <td class="text-center">
+        <%= link_to 'Ver', reservation_path(reservation), class: 'btn btn-primary btn-sm mr-1' %>
+        <%= link_to 'Editar', edit_reservation_path(reservation), class: 'btn btn-warning btn-sm mr-1' %>
+        <%= link_to 'Eliminar', reservation_path(reservation), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar esta reserva?' }, class: 'btn btn-danger btn-sm' %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Nueva Reserva', new_reservation_path, class: 'btn btn-success' %>
