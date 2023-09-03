@@ -11,7 +11,7 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-10 offset-md-1">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">Listado de Reservas</h3>
@@ -20,10 +20,12 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th class="text-center">Nombre del Huésped</th>
-              <th class="text-center">Nombre del Hotel</th>
+              <th class="text-center">Huésped</th>
+              <th class="text-center">Email Huésped</th>
+              <th class="text-center">Hotel</th>
               <th class="text-center">Check-in</th>
               <th class="text-center">Check-out</th>
+              <th class="text-center">Precio</th>
               <th class="text-center">Acciones</th>
             </tr>
             </thead>
@@ -31,9 +33,11 @@
             <% @reservations.each do |reservation| %>
               <tr>
                 <td class="text-center"><%= reservation.guest_name %></td>
-                <td class="text-center"><%= reservation.hotel&.name %></td>
+                <td class="text-center"><%= reservation.guest_email %></td>
+                <td class="text-center"><%= reservation.hotel&.name %> (<%= reservation.hotel&.stars || 'N/A' %><%= fa_icon 'star' %>)</td>
                 <td class="text-center"><%= reservation.check_in.strftime('%d/%m/%Y') %></td>
                 <td class="text-center"><%= reservation.check_out.strftime('%d/%m/%Y') %></td>
+                <td class="text-center"> <%= reservation.currency %> <%= reservation.price %></td>
                 <td class="text-center">
                   <%= link_to 'Ver', reservation_path(reservation), class: 'btn btn-primary btn-sm mr-1' %>
                   <%= link_to 'Editar', edit_reservation_path(reservation), class: 'btn btn-warning btn-sm mr-1' %>

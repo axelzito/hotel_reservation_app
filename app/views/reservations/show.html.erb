@@ -15,17 +15,24 @@
         </div>
         <div class="card-body">
           <dl class="row">
+            <dt class="col-sm-4">Nombre del Hotel:</dt>
+            <dd class="col-sm-8"><%= @reservation.hotel&.name %> (<%= @reservation.hotel&.stars || 'N/A' %><%= fa_icon 'star' %>)</dd>
+
             <dt class="col-sm-4">Nombre del Huésped:</dt>
             <dd class="col-sm-8"><%= @reservation.guest_name %></dd>
 
-            <dt class="col-sm-4">Nombre del Hotel:</dt>
-            <dd class="col-sm-8"><%= @reservation.hotel&.name %></dd>
+            <dt class="col-sm-4">Email del Huésped:</dt>
+            <dd class="col-sm-8"><%= @reservation.guest_email %></dd>
 
             <dt class="col-sm-4">Check-in:</dt>
             <dd class="col-sm-8"><%= @reservation.check_in.strftime('%d/%m/%Y') %></dd>
 
             <dt class="col-sm-4">Check-out:</dt>
             <dd class="col-sm-8"><%= @reservation.check_out.strftime('%d/%m/%Y') %></dd>
+
+            <dt class="col-sm-4">Precio:</dt>
+            <dd class="col-sm-8"><%= @reservation.currency %> <%= @reservation.price %></dd>
+
           </dl>
         </div>
         <div class="card-footer">
@@ -38,4 +45,3 @@
 </div>
 
 </body>
-
