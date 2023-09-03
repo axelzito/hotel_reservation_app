@@ -1,7 +1,12 @@
-<%= form_with model: @reservation, local: true do |form| %>
+<%= form_with model: @reservation, local: true, url: (@reservation.present? ? reservation_path(@reservation) : reservations_path) do |form| %>
   <div class="form-group">
     <%= form.label :guest_name, 'Nombre del Huésped' %>
     <%= form.text_field :guest_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :guest_email, 'Email del Huésped' %>
+    <%= form.text_field :guest_email, class: 'form-control' %>
   </div>
 
   <div class="form-group">
@@ -10,14 +15,28 @@
   </div>
 
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-3">
+      <%= form.label :currency, 'Currency' %>
+      <%= form.select :currency, [%w[€ EUR], %w[U$D USD]], { include_blank: true }, class: 'form-control' %>
+    </div>
+
+    <div class="form-group col-md-3">
+      <%= form.label :price, 'Price' %>
+      <%= form.text_field :price, class: 'form-control', type: 'number' %>
+    </div>
+
+    <div class="form-group col-md-3">
       <%= form.label :check_in, 'Check-in' %>
       <%= form.date_field :check_in, class: 'form-control', id: 'check_in_datepicker' %>
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-3">
       <%= form.label :check_out, 'Check-out' %>
       <%= form.date_field :check_out, class: 'form-control', id: 'check_out_datepicker' %>
     </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Guardar', class: 'btn btn-primary' %>
   </div>
 <% end %>
