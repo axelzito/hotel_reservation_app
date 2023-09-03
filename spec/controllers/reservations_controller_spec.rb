@@ -8,7 +8,7 @@ RSpec.describe ReservationsController, type: :controller do
   describe 'POST #create' do
     it 'creates a new reservation' do
       expect do
-        post :create, params: {
+        post :create, format: :json, params: {
           reservation: attributes_for(:reservation, hotel_id: hotel.id)
         }
       end.to change(Reservation, :count).by(1)
@@ -16,7 +16,7 @@ RSpec.describe ReservationsController, type: :controller do
     end
 
     it 'returns an error for invalid reservation' do
-      post :create, params: {
+      post :create, format: :json, params: {
         reservation: attributes_for(:reservation, hotel_id: nil)
       }
       expect(response).to have_http_status(:unprocessable_entity)
@@ -33,7 +33,7 @@ RSpec.describe ReservationsController, type: :controller do
   describe 'GET #show' do
     it 'returns a successful response' do
       reservation = create(:reservation, hotel_id: hotel.id)
-      get :show, params: { id: reservation.id }
+      get :show, format: :json, params: { id: reservation.id }
       expect(response).to have_http_status(:ok)
     end
   end
@@ -41,7 +41,7 @@ RSpec.describe ReservationsController, type: :controller do
   describe 'PUT #update' do
     it 'updates a reservation' do
       reservation = create(:reservation, hotel_id: hotel.id)
-      put :update, params: {
+      put :update, format: :json, params: {
         id: reservation.id,
         reservation: { guest_name: 'Updated Name' }
       }
@@ -51,7 +51,7 @@ RSpec.describe ReservationsController, type: :controller do
 
     it 'returns an error for invalid update' do
       reservation = create(:reservation, hotel_id: hotel.id)
-      put :update, params: {
+      put :update, format: :json, params: {
         id: reservation.id,
         reservation: { hotel_id: nil }
       }
@@ -63,7 +63,7 @@ RSpec.describe ReservationsController, type: :controller do
     it 'deletes a reservation' do
       reservation = create(:reservation, hotel_id: hotel.id)
       expect do
-        delete :destroy, params: { id: reservation.id }
+        delete :destroy, format: :json, params: { id: reservation.id }
       end.to change(Reservation, :count).by(-1)
       expect(response).to have_http_status(:no_content)
     end

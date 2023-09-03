@@ -5,31 +5,48 @@ class ReservationsController < ApplicationController
 
   def index
     @reservations = Reservation.all
-    render json: @reservations
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @reservations }
+    end
   end
 
   def show
     @reservation = Reservation.find(params[:id])
-    render json: @reservation
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @reservation }
+    end
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
 
-    if @reservation.save
-      render json: @reservation, status: :created
-    else
-      render json: @reservation.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if @reservation.save
+        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
+        format.json { render json: @reservation, status: :created }
+      else
+        format.html { render :new }
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def update
     @reservation = Reservation.find(params[:id])
 
-    if @reservation.update(reservation_params)
-      render json: @reservation
-    else
-      render json: @reservation.errors, status: :unprocessable_entity
+    # byebug
+    respond_to do |format|
+      if @reservation.update(reservation_params)
+        format.html { redirect_to @reservation, notice: 'Reserva atualizada com sucesso.' }
+        format.json { render json: @reservation }
+      else
+        format.html { render :edit }
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -37,7 +54,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
 
-    head :no_content
+    respond_to do |format|
+      format.html { redirect_to reservations_url, notice: 'Reserva excluída com sucesso.' }
+      format.json { head :no_content }
+    end
   end
 
   private
