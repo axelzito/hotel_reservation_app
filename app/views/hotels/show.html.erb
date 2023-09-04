@@ -22,7 +22,7 @@
             <dd class="col-sm-8"><%= @hotel.address %></dd>
 
             <dt class="col-sm-4">Estrellas del Hotel:</dt>
-            <dd class="col-sm-8"><%= @hotel.stars %></dd>
+            <dd class="col-sm-8"><%= @hotel.stars || 'N/A' %> <%= fa_icon 'star' %></dd>
 
             <dt class="col-sm-4">Rango de Precios:</dt>
             <dd class="col-sm-8"><%= @hotel.price_range %></dd>
