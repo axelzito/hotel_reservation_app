@@ -27,18 +27,30 @@
     ```
     bundle install
     ```
-
-4. Start the Rails server:
+   
+4. Generate the default Mongoid configuration:
+    ```
+    rails g mongoid:config
+    ```
+   
+5. Start the Rails server:
     ```
     rails server
     ```
 
 * The system should now be running locally at http://localhost:3000.
 
-## Using Postman
-#### You can use Postman to interact with the system's API and make GET and POST requests for hotels and reservations. Here are some examples of how to use Postman:
+## Running RSpec Tests
+#### Run the RSpec tests:
 
-##### Get all hotels
+```
+rspec
+```
+
+## Using Postman
+###### You can use Postman to interact with the system's API and make GET and POST requests for hotels and reservations. Here are some examples of how to use Postman:
+
+#### Get all hotels
 * Method: GET
 * URL: http://localhost:3000/hotels
 * Body: None
