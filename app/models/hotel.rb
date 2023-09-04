@@ -12,4 +12,8 @@ class Hotel
   field :description, type: String
 
   has_many :reservations, class_name: 'Reservation', dependent: :restrict_with_exception
+
+  def name_with_stars
+    "#{name} #{stars || 'N/A'}★"
+  end
 end

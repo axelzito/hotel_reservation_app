@@ -6,7 +6,7 @@ RSpec.describe HotelsController, type: :controller do
   describe 'POST #create' do
     it 'creates a new hotel' do
       expect do
-        post :create, params: {
+        post :create, format: :json, params: {
           hotel: attributes_for(:hotel)
         }
       end.to change(Hotel, :count).by(1)
@@ -24,7 +24,7 @@ RSpec.describe HotelsController, type: :controller do
   describe 'GET #show' do
     it 'returns a successful response' do
       hotel = create(:hotel)
-      get :show, params: { id: hotel.id }
+      get :show, format: :json, params: { id: hotel.id }
       expect(response).to have_http_status(:ok)
     end
   end
@@ -32,7 +32,7 @@ RSpec.describe HotelsController, type: :controller do
   describe 'PUT #update' do
     it 'updates a hotel' do
       hotel = create(:hotel)
-      put :update, params: {
+      put :update, format: :json, params: {
         id: hotel.id,
         hotel: { description: 'Updated Description' }
       }
@@ -45,7 +45,7 @@ RSpec.describe HotelsController, type: :controller do
     it 'deletes a hotel' do
       hotel = create(:hotel)
       expect do
-        delete :destroy, params: { id: hotel.id }
+        delete :destroy, format: :json, params: { id: hotel.id }
       end.to change(Hotel, :count).by(-1)
       expect(response).to have_http_status(:no_content)
     end

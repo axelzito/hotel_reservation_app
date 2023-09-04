@@ -11,7 +11,7 @@
 
   <div class="form-group">
     <%= form.label :hotel_id, 'Nombre del Hotel' %>
-    <%= form.collection_select :hotel_id, Hotel.all, :id, :name, { include_blank: true }, class: 'form-control' %>
+    <%= form.collection_select :hotel_id, Hotel.all, :id, :name_with_stars, { include_blank: true }, class: 'form-control' %>
   </div>
 
   <div class="form-row">
