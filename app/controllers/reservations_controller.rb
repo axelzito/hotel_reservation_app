@@ -20,6 +20,10 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def new
+    @reservation = Reservation.new
+  end
+
   def edit; end
 
   def create

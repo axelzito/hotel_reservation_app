@@ -1,4 +1,4 @@
-<%= form_with model: @reservation, local: true, url: (@reservation.present? ? reservation_path(@reservation) : reservations_path) do |form| %>
+<%= form_with model: @reservation, local: true, url: (@reservation.persisted? ? reservation_path(@reservation) : reservations_path) do |form| %>
   <div class="form-group">
     <%= form.label :guest_name, 'Nombre del Huésped' %>
     <%= form.text_field :guest_name, class: 'form-control' %>
