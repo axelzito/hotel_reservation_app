@@ -25,3 +25,9 @@ $(document).on('turbolinks:load', function() {
         autoclose: true
     });
 });
+
+$(document).ready(function() {
+    $('#price-field').on('input', function() {
+        $(this).val($(this).val().replace(/[^0-9.,]/g, ''));
+    });
+});
