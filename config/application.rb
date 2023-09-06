@@ -30,7 +30,10 @@ module HotelReservationApp
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.time_zone = "Central Time (US & Canada)"
+    # config.time_zone = 'Central Time (US & Canada)'
+    config.i18n.default_locale = :es
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
+    config.i18n.available_locales = %i[en es pt]
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don't generate system test files.

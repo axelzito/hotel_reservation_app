@@ -293,6 +293,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   font-awesome-rails
+  i18n
   importmap-rails
   jbuilder
   mongoid (~> 7.0)
