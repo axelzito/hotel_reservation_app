@@ -6,7 +6,7 @@ FactoryBot.define do
     description { Faker::Lorem.paragraph }
     email { Faker::Internet.email }
     name { Faker::Company.name }
-    phone { Faker::PhoneNumber.phone_number }
+    phone { Faker::PhoneNumber.phone_number_with_country_code }
     price_range { Faker::Lorem.word }
     stars { Faker::Number.between(from: 1, to: 5).to_s }
   end

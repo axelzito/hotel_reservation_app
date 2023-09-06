@@ -19,6 +19,27 @@ RSpec.describe Reservation, type: :model do
     it { should validate_presence_of(:guest_email) }
     it { should validate_presence_of(:check_in) }
     it { should validate_presence_of(:check_out) }
+    it { should validate_presence_of(:currency) }
+    it { should validate_presence_of(:price) }
+
+    it 'validates price as a number with up to 2 decimal places' do
+      reservation.price = '100.23'
+      expect(reservation).to be_valid
+
+      reservation.price = '1.01'
+      expect(reservation).to be_valid
+
+      reservation.price = '0.99'
+      expect(reservation).to be_valid
+
+      reservation.price = '2,999'
+      expect(reservation).not_to be_valid
+      expect(reservation.errors[:price]).to include('is invalid')
+
+      reservation.price = 'invalid_price'
+      expect(reservation).not_to be_valid
+      expect(reservation.errors[:price]).to include('is invalid')
+    end
 
     it 'allows valid email format' do
       reservation.guest_email = 'valid_email@example.com'
