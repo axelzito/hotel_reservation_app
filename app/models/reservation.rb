@@ -11,4 +11,8 @@ class Reservation
   field :guest_email, type: String
 
   belongs_to :hotel, class_name: 'Hotel'
+
+  validates :currency, :check_in, :check_out, :guest_name, presence: true
+  validates :price, presence: true, format: { with: /\A\d{1,6}(\.\d{0,2})?\z/ }
+  validates :guest_email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
 end
