@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class HotelsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!
   before_action :set_hotel, only: %i[show edit update destroy]
 
   def index
