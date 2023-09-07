@@ -1,49 +1,39 @@
 en:
-  hello: "Hello world"
-
-  mongoid:
-    errors:
-      messages:
-        message_title: "Error when deleting the record"
-        delete_restriction.message: "Cannot delete this record due to restrictions"
-        summary_title: "Error when deleting the record"
-        delete_restriction.summary: "Cannot delete this record due to restrictions"
-        resolution_title: "Resolution"
-        delete_restriction.resolution: "Review the restrictions and try deleting again"
+  hello: Hello world
 
   home:
-    welcome_title: "Welcome to the Reservation System"
-    system_description: "Here you can manage your reservations and hotels easily and efficiently!"
+    welcome_title: Welcome to the Reservation System
+    system_description: Here you can manage your reservations and hotels easily and efficiently!
     capabilities: "In this system, you have the ability to:"
     create_new_hotels: "Create New Hotels:"
-    create_new_hotels_option: "If you wish to add a new hotel to the system, select the 'New Hotel' option in the menu."
+    create_new_hotels_option: If you wish to add a new hotel to the system, select the New Hotel option in the menu.
     manage_hotels: "View and Manage Hotels:"
-    manage_hotels_option: "You can view a list of available hotels, as well as add new hotels or edit existing ones."
-    view_hotels_button: "View Hotels"
+    manage_hotels_option: You can view a list of available hotels, as well as add new hotels or edit existing ones.
+    view_hotels_button: View Hotels
     create_new_reservations: "Create New Reservations:"
-    create_new_reservations_option: "If you want to make a new reservation, simply select the 'New Reservation' option in the menu."
+    create_new_reservations_option: If you want to make a new reservation, simply select the New Reservation option in the menu.
     manage_reservations: "View and Manage Reservations:"
-    manage_reservations_option: "You can view existing reservations, edit reservation details, or delete reservations if necessary."
-    view_reservations_button: "View Reservations"
+    manage_reservations_option: You can view existing reservations, edit reservation details, or delete reservations if necessary.
+    view_reservations_button: View Reservations
 
   hotels:
     index:
-      title: "List of Hotels"
-      hotel_name: "Hotel Name"
-      hotel_address: "Hotel Address"
-      price_range: "Price Range"
-      hotel_phone: "Hotel Phone"
-      actions: "Actions"
-      new_button: "New Hotel"
-      view_button: "View"
-      edit_button: "Edit"
-      delete_button: "Delete"
-      confirm_delete: "Are you sure you want to delete this hotel?"
+      title: List of Hotels
+      hotel_name: Hotel Name
+      hotel_address: Hotel Address
+      price_range: Price Range
+      hotel_phone: Hotel Phone
+      actions: Actions
+      new_button: New Hotel
+      view_button: View
+      edit_button: Edit
+      delete_button: Delete
+      confirm_delete: Are you sure you want to delete this hotel?
     new:
-      title: "New Hotel"
-      back_button: "Back to List"
+      title: New Hotel
+      back_button: Back to List
     show:
-      title: "Hotel Details"
+      title: Hotel Details
       name_label: "Hotel Name:"
       address_label: "Hotel Address:"
       stars_label: "Hotel Stars:"
@@ -51,18 +41,62 @@ en:
       phone_label: "Hotel Phone:"
       email_label: "Hotel Email:"
       description_label: "Hotel Description:"
-      edit_button: "Edit Hotel"
-      back_button: "Back to List"
+      edit_button: Edit Hotel
+      back_button: Back to List
     edit:
-      title: "Edit Hotel"
-      edit_title: "Edit Hotel"
-      back_button: "Back to List"
+      title: Edit Hotel
+      edit_title: Edit Hotel
+      back_button: Back to List
     form:
-      name_label: "Hotel Name"
-      address_label: "Hotel Address"
-      phone_label: "Hotel Phone"
-      email_label: "Hotel Email"
-      stars_label: "Hotel Stars"
-      price_range_label: "Price Range"
-      description_label: "Hotel Description"
-      submit_button: "Save"
+      name_label: Hotel Name
+      address_label: Hotel Address
+      phone_label: Hotel Phone
+      email_label: Hotel Email
+      stars_label: Hotel Stars
+      price_range_label: Price Range
+      description_label: Hotel Description
+      submit_button: Save
+
+  reservations:
+    index:
+      title: Reservations List
+      guest_name: Guest
+      guest_email: Guest Email
+      hotel: Hotel
+      check_in: Check-in
+      check_out: Check-out
+      price: Price
+      actions: Actions
+      new_reservation: New Reservation
+      view_button: Ver
+      edit_button: Editar
+      delete_button: Eliminar
+    show:
+      title: Reservation Details
+      hotel_name: Hotel Name
+      guest_name: Guest Name
+      guest_email: Guest Email
+      check_in: Check-in
+      check_out: Check-out
+      price: Price
+      edit: Edit Reservation
+      back_to_list: Back to List
+    new:
+      title: New Reservation
+      form_title: Reservation Form
+      back_to_list: Back to List
+    edit:
+      title: Edit Reservation
+      back_to_list: Back to List
+    form:
+      guest_name: Guest Name
+      guest_email: Guest Email
+      hotel_name: Hotel Name
+      select_hotel: Select a Hotel
+      currency: Currency
+      select_currency: Select Currency
+      price: Price
+      check_in: Check-in
+      check_out: Check-out
+      save_button: Save
+      back_to_list: Back to List

@@ -1,39 +1,39 @@
 es:
-  hello: "Hello world"
+  hello: Hello world
 
   home:
-    welcome_title: "Bienvenido al Sistema de Reservas"
-    system_description: "¡Aquí puedes gestionar tus reservas y hoteles de manera sencilla y eficiente!"
+    welcome_title: Bienvenido al Sistema de Reservas
+    system_description: ¡Aquí puedes gestionar tus reservas y hoteles de manera sencilla y eficiente!
     capabilities: "En este sistema, tienes la capacidad de:"
     create_new_hotels: "Crear Nuevos Hoteles:"
-    create_new_hotels_option: "Si deseas agregar un nuevo hotel al sistema, selecciona la opción 'Nuevo Hotel' en el menú."
+    create_new_hotels_option: Si deseas agregar un nuevo hotel al sistema, selecciona la opción Nuevo Hotel en el menú.
     manage_hotels: "Ver y administrar Hoteles:"
-    manage_hotels_option: "Puedes ver una lista de los hoteles disponibles, así como agregar nuevos hoteles o editar los existentes."
-    view_hotels_button: "Ver Hoteles"
+    manage_hotels_option: Puedes ver una lista de los hoteles disponibles, así como agregar nuevos hoteles o editar los existentes.
+    view_hotels_button: Ver Hoteles
     create_new_reservations: "Crear Nuevas Reservas:"
-    create_new_reservations_option: "Si deseas realizar una nueva reserva, simplemente selecciona la opción 'Nueva Reserva' en el menú."
+    create_new_reservations_option: Si deseas realizar una nueva reserva, simplemente selecciona la opción Nueva Reserva en el menú.
     manage_reservations: "Ver y administrar Reservas:"
-    manage_reservations_option: "Puedes ver las reservas existentes, editar los detalles de una reserva o eliminar reservas si es necesario."
-    view_reservations_button: "Ver Reservas"
+    manage_reservations_option: Puedes ver las reservas existentes, editar los detalles de una reserva o eliminar reservas si es necesario.
+    view_reservations_button: Ver Reservas
 
   hotels:
     index:
-      title: "Listado de Hoteles"
-      hotel_name: "Nombre del Hotel"
-      hotel_address: "Dirección del Hotel"
-      price_range: "Rango de Precios"
-      hotel_phone: "Teléfono del Hotel"
-      actions: "Acciones"
-      new_button: "Nuevo Hotel"
-      view_button: "Ver"
-      edit_button: "Editar"
-      delete_button: "Eliminar"
-      confirm_delete: "¿Estás seguro de que deseas eliminar este hotel?"
+      title: Listado de Hoteles
+      hotel_name: Nombre del Hotel
+      hotel_address: Dirección del Hotel
+      price_range: Rango de Precios
+      hotel_phone: Teléfono del Hotel
+      actions: Acciones
+      new_button: Nuevo Hotel
+      view_button: Ver
+      edit_button: Editar
+      delete_button: Eliminar
+      confirm_delete: ¿Estás seguro de que deseas eliminar este hotel?
     new:
-      title: "Nuevo Hotel"
-      back_button: "Volver a la Lista"
+      title: Nuevo Hotel
+      back_button: Volver a la Lista
     show:
-      title: "Detalles del Hotel"
+      title: Detalles del Hotel
       name_label: "Nombre del Hotel:"
       address_label: "Dirección del Hotel:"
       stars_label: "Estrellas del Hotel:"
@@ -41,18 +41,62 @@ es:
       phone_label: "Teléfono del Hotel:"
       email_label: "Email del Hotel:"
       description_label: "Descripción del Hotel:"
-      edit_button: "Editar Hotel"
-      back_button: "Volver a la Lista"
+      edit_button: Editar Hotel
+      back_button: Volver a la Lista
     edit:
-      title: "Editar Hotel"
-      edit_title: "Editar Hotel"
-      back_button: "Volver a la Lista"
+      title: Editar Hotel
+      edit_title: Editar Hotel
+      back_button: Volver a la Lista
     form:
-      name_label: "Nombre del Hotel"
-      address_label: "Dirección del Hotel"
-      phone_label: "Teléfono del Hotel"
-      email_label: "Email del Hotel"
-      stars_label: "Estrellas del Hotel"
-      price_range_label: "Rango de Precios"
-      description_label: "Descripción del Hotel"
-      submit_button: "Guardar"
+      name_label: Nombre del Hotel
+      address_label: Dirección del Hotel
+      phone_label: Teléfono del Hotel
+      email_label: Email del Hotel
+      stars_label: Estrellas del Hotel
+      price_range_label: Rango de Precios
+      description_label: Descripción del Hotel
+      submit_button: Guardar
+
+  reservations:
+    index:
+      title: Listado de Reservas
+      guest_name: Huésped
+      guest_email: Email Huésped
+      hotel: Hotel
+      check_in: Check-in
+      check_out: Check-out
+      price: Precio
+      actions: Acciones
+      new_reservation: Nueva Reserva
+      view_button: Ver
+      edit_button: Editar
+      delete_button: Eliminar
+    show:
+      title: Detalles de la Reserva
+      hotel_name: Nombre del Hotel
+      guest_name: Nombre del Huésped
+      guest_email: Email del Huésped
+      check_in: Check-in
+      check_out: Check-out
+      price: Precio
+      edit: Editar Reserva
+      back_to_list: Volver a la Lista
+    new:
+      title: Nueva Reserva
+      form_title: Formulario de Reserva
+      back_to_list: Volver a la Lista
+    edit:
+      title: Editar Reserva
+      back_to_list: Volver a la Lista
+    form:
+      guest_name: Nombre del Huésped
+      guest_email: Email del Huésped
+      hotel_name: Nombre del Hotel
+      select_hotel: Seleccionar Hotel
+      currency: Moneda
+      select_currency: Seleccionar Moneda
+      price: Precio
+      check_in: Check-in
+      check_out: Check-out
+      save_button: Guardar
+      back_to_list: Volver a la Lista

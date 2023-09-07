@@ -4,7 +4,7 @@
   <%= csrf_meta_tag %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listado de Reservas</title>
+  <title><%= t('reservations.index.title') %></title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,19 +14,19 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Listado de Reservas</h3>
+          <h3 class="card-title"><%= t('reservations.index.title') %></h3>
         </div>
         <div class="card-body">
           <table class="table table-striped">
             <thead>
             <tr>
-              <th class="text-center">Huésped</th>
-              <th class="text-center">Email Huésped</th>
-              <th class="text-center">Hotel</th>
-              <th class="text-center">Check-in</th>
-              <th class="text-center">Check-out</th>
-              <th class="text-center">Precio</th>
-              <th class="text-center">Acciones</th>
+              <th class="text-center"><%= t('reservations.index.guest_name') %></th>
+              <th class="text-center"><%= t('reservations.index.guest_email') %></th>
+              <th class="text-center"><%= t('reservations.index.hotel') %></th>
+              <th class="text-center"><%= t('reservations.index.check_in') %></th>
+              <th class="text-center"><%= t('reservations.index.check_out') %></th>
+              <th class="text-center"><%= t('reservations.index.price') %></th>
+              <th class="text-center"><%= t('reservations.index.actions') %></th>
             </tr>
             </thead>
             <tbody>
@@ -37,11 +37,11 @@
                 <td class="text-center"><%= reservation.hotel&.name %> (<%= reservation.hotel&.stars || 'N/A' %><%= fa_icon 'star' %>)</td>
                 <td class="text-center"><%= reservation.check_in.strftime('%d/%m/%Y') %></td>
                 <td class="text-center"><%= reservation.check_out.strftime('%d/%m/%Y') %></td>
-                <td class="text-center"> <%= reservation.currency %> <%= reservation.price %></td>
+                <td class="text-center"><%= reservation.currency %> <%= reservation.price %></td>
                 <td class="text-center">
-                  <%= link_to 'Ver', reservation_path(reservation), class: 'btn btn-primary btn-sm mr-1' %>
-                  <%= link_to 'Editar', edit_reservation_path(reservation), class: 'btn btn-warning btn-sm mr-1' %>
-                  <%= link_to 'Eliminar', reservation_path(reservation), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar esta reserva?' }, class: 'btn btn-danger btn-sm' %>
+                  <%= link_to t('reservations.index.view_button'), reservation_path(reservation), class: 'btn btn-primary btn-sm mr-1' %>
+                  <%= link_to t('reservations.index.edit_button'), edit_reservation_path(reservation), class: 'btn btn-warning btn-sm mr-1' %>
+                  <%= link_to t('reservations.index.delete_button'), reservation_path(reservation), method: :delete, data: { confirm: t('reservations.index.confirm_delete') }, class: 'btn btn-danger btn-sm' %>
                 </td>
               </tr>
             <% end %>
@@ -49,7 +49,7 @@
           </table>
         </div>
         <div class="card-footer">
-          <%= link_to 'Nueva Reserva', new_reservation_path, class: 'btn btn-success' %>
+          <%= link_to t('reservations.index.new_reservation'), new_reservation_path, class: 'btn btn-success' %>
         </div>
       </div>
     </div>
