@@ -4,7 +4,7 @@
   <%= csrf_meta_tag %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listado de Hoteles</title>
+  <title><%= t('hotels.index.title') %></title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,17 +14,17 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Listado de Hoteles</h3>
+          <h3 class="card-title"><%= t('hotels.index.title') %></h3>
         </div>
         <div class="card-body">
           <table class="table table-striped">
             <thead>
             <tr>
-              <th class="text-center">Nombre del Hotel</th>
-              <th class="text-center">Dirección del Hotel</th>
-              <th class="text-center">Rango de Precios</th>
-              <th class="text-center">Teléfono del Hotel</th>
-              <th class="text-center">Acciones</th>
+              <th class="text-center"><%= t('hotels.index.hotel_name') %></th>
+              <th class="text-center"><%= t('hotels.index.hotel_address') %></th>
+              <th class="text-center"><%= t('hotels.index.price_range') %></th>
+              <th class="text-center"><%= t('hotels.index.hotel_phone') %></th>
+              <th class="text-center"><%= t('hotels.index.actions') %></th>
             </tr>
             </thead>
             <tbody>
@@ -35,9 +35,9 @@
                 <td class="text-center"><%= hotel.price_range %></td>
                 <td class="text-center"><%= hotel.phone %></td>
                 <td class="text-center">
-                  <%= link_to 'Ver', hotel_path(hotel), class: 'btn btn-primary btn-sm mr-1' %>
-                  <%= link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-warning btn-sm mr-1' %>
-                  <%= link_to 'Eliminar', hotel_path(hotel), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar este hotel?' }, class: 'btn btn-danger btn-sm' %>
+                  <%= link_to t('hotels.index.view_button'), hotel_path(hotel), class: 'btn btn-primary btn-sm mr-1' %>
+                  <%= link_to t('hotels.index.edit_button'), edit_hotel_path(hotel), class: 'btn btn-warning btn-sm mr-1' %>
+                  <%= link_to t('hotels.index.delete_button'), hotel_path(hotel), method: :delete, data: { confirm: t('hotels.index.confirm_delete') }, class: 'btn btn-danger btn-sm' %>
                 </td>
               </tr>
             <% end %>
@@ -45,7 +45,7 @@
           </table>
         </div>
         <div class="card-footer">
-          <%= link_to 'Nuevo Hotel', new_hotel_path, class: 'btn btn-success' %>
+          <%= link_to t('hotels.index.new_button'), new_hotel_path, class: 'btn btn-success' %>
         </div>
       </div>
     </div>

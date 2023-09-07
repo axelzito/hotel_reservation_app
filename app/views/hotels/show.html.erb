@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalles del Hotel</title>
+  <title><%= t('hotels.show.title') %></title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -11,35 +11,35 @@
     <div class="col-md-8 offset-md-2">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Detalles del Hotel</h3>
+          <h3 class="card-title"><%= t('hotels.show.title') %></h3>
         </div>
         <div class="card-body">
           <dl class="row">
-            <dt class="col-sm-4">Nombre del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.name_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.name %> (<%= @hotel.stars || 'N/A' %><%= fa_icon 'star' %>)</dd>
 
-            <dt class="col-sm-4">Dirección del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.address_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.address %></dd>
 
-            <dt class="col-sm-4">Estrellas del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.stars_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.stars || 'N/A' %> <%= fa_icon 'star' %></dd>
 
-            <dt class="col-sm-4">Rango de Precios:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.price_range_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.price_range %></dd>
 
-            <dt class="col-sm-4">Teléfono del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.phone_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.phone %></dd>
 
-            <dt class="col-sm-4">Email del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.email_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.email %></dd>
 
-            <dt class="col-sm-4">Descripción del Hotel:</dt>
+            <dt class="col-sm-4"><%= t('hotels.show.description_label') %></dt>
             <dd class="col-sm-8"><%= @hotel.description %></dd>
           </dl>
         </div>
         <div class="card-footer">
-          <%= link_to 'Editar Hotel', edit_hotel_path(@hotel), class: 'btn btn-warning' %>
-          <%= link_to 'Volver a la Lista', hotels_path, class: 'btn btn-secondary' %>
+          <%= link_to t('hotels.show.edit_button'), edit_hotel_path(@hotel), class: 'btn btn-warning' %>
+          <%= link_to t('hotels.show.back_button'), hotels_path, class: 'btn btn-secondary' %>
         </div>
       </div>
     </div>

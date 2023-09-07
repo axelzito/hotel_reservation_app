@@ -1,2 +1,68 @@
 pt:
   hello: "Hello world"
+
+  mongoid:
+    errors:
+      messages:
+        message_title: "Erro ao excluir o registro"
+        delete_restriction.message: "Não é possível excluir este registro devido a restrições"
+        summary_title: "Erro ao excluir o registro"
+        delete_restriction.summary: "Não é possível excluir este registro devido a restrições"
+        resolution_title: "Resolução"
+        delete_restriction.resolution: "Verifique as restrições e tente novamente a exclusão"
+
+  home:
+    welcome_title: "Bem-vindo ao Sistema de Reservas"
+    system_description: "Aqui você pode gerenciar suas reservas e hotéis de forma fácil e eficiente!"
+    capabilities: "Neste sistema, você tem a capacidade de:"
+    create_new_hotels: "Criar Novos Hotéis:"
+    create_new_hotels_option: "Se deseja adicionar um novo hotel ao sistema, selecione a opção 'Novo Hotel' no menu."
+    manage_hotels: "Ver e Gerenciar Hotéis:"
+    manage_hotels_option: "Você pode visualizar uma lista de hotéis disponíveis, bem como adicionar novos hotéis ou editar os existentes."
+    view_hotels_button: "Ver Hotéis"
+    create_new_reservations: "Criar Novas Reservas:"
+    create_new_reservations_option: "Se deseja fazer uma nova reserva, basta selecionar a opção 'Nova Reserva' no menu."
+    manage_reservations: "Ver e Gerenciar Reservas:"
+    manage_reservations_option: "Você pode visualizar reservas existentes, editar detalhes das reservas ou excluí-las, se necessário."
+    view_reservations_button: "Ver Reservas"
+
+  hotels:
+    index:
+      title: "Listado de Hotéis"
+      hotel_name: "Nome do Hotel"
+      hotel_address: "Endereço do Hotel"
+      price_range: "Faixa de Preço"
+      hotel_phone: "Telefone do Hotel"
+      actions: "Ações"
+      new_button: "Novo Hotel"
+      view_button: "Ver"
+      edit_button: "Editar"
+      delete_button: "Excluir"
+      confirm_delete: "Tem certeza de que deseja excluir este hotel?"
+    new:
+      title: "Novo Hotel"
+      back_button: "Voltar para a Lista"
+    show:
+      title: "Detalhes do Hotel"
+      name_label: "Nome do Hotel:"
+      address_label: "Endereço do Hotel:"
+      stars_label: "Estrelas do Hotel:"
+      price_range_label: "Faixa de Preço:"
+      phone_label: "Telefone do Hotel:"
+      email_label: "Email do Hotel:"
+      description_label: "Descrição do Hotel:"
+      edit_button: "Editar Hotel"
+      back_button: "Voltar para a Lista"
+    edit:
+      title: "Editar Hotel"
+      edit_title: "Editar Hotel"
+      back_button: "Voltar para a Lista"
+    form:
+      name_label: "Nome do Hotel"
+      address_label: "Endereço do Hotel"
+      phone_label: "Telefone do Hotel"
+      email_label: "Email do Hotel"
+      stars_label: "Estrelas do Hotel"
+      price_range_label: "Faixa de Preço"
+      description_label: "Descrição do Hotel"
+      submit_button: "Salvar"

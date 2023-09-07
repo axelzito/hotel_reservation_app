@@ -1,33 +1,68 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  mongoid:
+    errors:
+      messages:
+        message_title: "Error when deleting the record"
+        delete_restriction.message: "Cannot delete this record due to restrictions"
+        summary_title: "Error when deleting the record"
+        delete_restriction.summary: "Cannot delete this record due to restrictions"
+        resolution_title: "Resolution"
+        delete_restriction.resolution: "Review the restrictions and try deleting again"
+
+  home:
+    welcome_title: "Welcome to the Reservation System"
+    system_description: "Here you can manage your reservations and hotels easily and efficiently!"
+    capabilities: "In this system, you have the ability to:"
+    create_new_hotels: "Create New Hotels:"
+    create_new_hotels_option: "If you wish to add a new hotel to the system, select the 'New Hotel' option in the menu."
+    manage_hotels: "View and Manage Hotels:"
+    manage_hotels_option: "You can view a list of available hotels, as well as add new hotels or edit existing ones."
+    view_hotels_button: "View Hotels"
+    create_new_reservations: "Create New Reservations:"
+    create_new_reservations_option: "If you want to make a new reservation, simply select the 'New Reservation' option in the menu."
+    manage_reservations: "View and Manage Reservations:"
+    manage_reservations_option: "You can view existing reservations, edit reservation details, or delete reservations if necessary."
+    view_reservations_button: "View Reservations"
+
+  hotels:
+    index:
+      title: "List of Hotels"
+      hotel_name: "Hotel Name"
+      hotel_address: "Hotel Address"
+      price_range: "Price Range"
+      hotel_phone: "Hotel Phone"
+      actions: "Actions"
+      new_button: "New Hotel"
+      view_button: "View"
+      edit_button: "Edit"
+      delete_button: "Delete"
+      confirm_delete: "Are you sure you want to delete this hotel?"
+    new:
+      title: "New Hotel"
+      back_button: "Back to List"
+    show:
+      title: "Hotel Details"
+      name_label: "Hotel Name:"
+      address_label: "Hotel Address:"
+      stars_label: "Hotel Stars:"
+      price_range_label: "Price Range:"
+      phone_label: "Hotel Phone:"
+      email_label: "Hotel Email:"
+      description_label: "Hotel Description:"
+      edit_button: "Edit Hotel"
+      back_button: "Back to List"
+    edit:
+      title: "Edit Hotel"
+      edit_title: "Edit Hotel"
+      back_button: "Back to List"
+    form:
+      name_label: "Hotel Name"
+      address_label: "Hotel Address"
+      phone_label: "Hotel Phone"
+      email_label: "Hotel Email"
+      stars_label: "Hotel Stars"
+      price_range_label: "Price Range"
+      description_label: "Hotel Description"
+      submit_button: "Save"
