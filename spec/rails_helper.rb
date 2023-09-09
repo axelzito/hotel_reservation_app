@@ -34,6 +34,7 @@ require 'rspec/rails'
 RSpec.configure do |config|
   # Remove this line to enable support for ActiveRecord
   config.use_active_record = false
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # If you enable ActiveRecord support you should uncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you

@@ -3,6 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe HotelsController, type: :controller do
+  let!(:user) { create(:user) }
+
+  before do
+    sign_in user
+  end
+
   describe 'POST #create' do
     it 'creates a new hotel' do
       expect do

@@ -4,6 +4,11 @@ require 'rails_helper'
 
 RSpec.describe ReservationsController, type: :controller do
   let(:hotel) { create(:hotel) }
+  let!(:user) { create(:user) }
+
+  before do
+    sign_in user
+  end
 
   describe 'POST #create' do
     it 'creates a new reservation' do
