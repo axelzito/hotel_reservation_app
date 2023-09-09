@@ -19,7 +19,7 @@ RSpec.describe Hotel, type: :model do
     it 'validates the format of email' do
       hotel.email = 'invalid_email'
       expect(hotel).not_to be_valid
-      expect(hotel.errors[:email]).to include('is invalid')
+      expect(hotel.errors[:email]).to include(I18n.t('mongoid.errors.models.hotel.attributes.email.invalid'))
     end
 
     it 'allows valid email format' do

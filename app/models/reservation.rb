@@ -16,7 +16,7 @@ class Reservation
   validates :price, presence: true, format: { with: /\A\d+(?:[,.]\d{2})?\z/ }
   validates :guest_email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
 
-  validate :check_in_not_in_past
+  # validate :check_in_not_in_past
   validate :check_out_after_check_in
 
   private

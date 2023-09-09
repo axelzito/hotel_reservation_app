@@ -34,11 +34,11 @@ RSpec.describe Reservation, type: :model do
 
       reservation.price = '2,999'
       expect(reservation).not_to be_valid
-      expect(reservation.errors[:price]).to include('is invalid')
+      expect(reservation.errors[:price]).to include(I18n.t('mongoid.errors.models.reservation.attributes.price.invalid'))
 
       reservation.price = 'invalid_price'
       expect(reservation).not_to be_valid
-      expect(reservation.errors[:price]).to include('is invalid')
+      expect(reservation.errors[:price]).to include(I18n.t('mongoid.errors.models.reservation.attributes.price.invalid'))
     end
 
     it 'allows valid email format' do
@@ -49,7 +49,7 @@ RSpec.describe Reservation, type: :model do
     it 'validates the format of email' do
       reservation.guest_email = 'invalid_email'
       expect(reservation).not_to be_valid
-      expect(reservation.errors[:guest_email]).to include('is invalid')
+      expect(reservation.errors[:guest_email]).to include(I18n.t('mongoid.errors.models.reservation.attributes.guest_email.invalid'))
     end
   end
 end

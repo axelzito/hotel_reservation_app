@@ -1,6 +1,43 @@
 en:
   hello: Hello world
 
+  mongoid:
+    errors:
+      models:
+        reservation:
+          attributes:
+            currency:
+              blank: Can't be blank
+              check_in:
+                blank: Can't be blank
+              check_out:
+                blank: Can't be blank
+              guest_name:
+                blank: Can't be blank
+            guest_email:
+              blank: Can't be blank.
+              invalid: Is not valid. Please enter a valid email address.
+            price:
+              blank: Can't be blank.
+              invalid: Is not valid. Enter a valid number with up to 2 decimal places.
+            check_in_not_in_past: Can't be in the past.
+            check_out_after_check_in: Must be after the check-in date.
+        hotel:
+          attributes:
+            name:
+              blank: Can't be blank
+            address:
+              blank: Can't be blank
+            stars:
+              blank: Can't be blank
+            price_range:
+              blank: Can't be blank
+            phone:
+              blank: Can't be blank
+            email:
+              blank: Can't be blank
+              invalid: Is invalid
+
   home:
     welcome_title: Welcome to the Reservation System
     system_description: Here you can manage your reservations and hotels easily and efficiently!

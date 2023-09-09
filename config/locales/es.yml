@@ -1,6 +1,43 @@
 es:
   hello: Hello world
 
+  mongoid:
+    errors:
+      models:
+        reservation:
+          attributes:
+            currency:
+              blank: No puede estar en blanco
+              check_in:
+                blank: No puede estar en blanco
+              check_out:
+                blank: No puede estar en blanco
+              guest_name:
+                blank: No puede estar en blanco
+            guest_email:
+              blank: No puede estar en blanco.
+              invalid: No es válido. Por favor, ingrese una dirección de correo electrónico válida.
+            price:
+              blank: No puede estar en blanco.
+              invalid: No es válido. Ingrese un número válido con hasta 2 decimales.
+            check_in_not_in_past: No puede estar en el pasado.
+            check_out_after_check_in: Debe ser después de la fecha de check-in.
+        hotel:
+          attributes:
+            name:
+              blank: No puede estar en blanco
+            address:
+              blank: No puede estar en blanco
+            stars:
+              blank: No puede estar en blanco
+            price_range:
+              blank: No puede estar en blanco
+            phone:
+              blank: No puede estar en blanco
+            email:
+              blank: No puede estar en blanco
+              invalid: Es inválido
+
   home:
     welcome_title: Bienvenido al Sistema de Reservas
     system_description: ¡Aquí puedes gestionar tus reservas y hoteles de manera sencilla y eficiente!
