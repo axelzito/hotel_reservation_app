@@ -144,3 +144,7 @@ pt:
       check_out: Check-out
       save_button: Salvar
       back_to_list: Voltar para a Lista
+  devise:
+    sessions:
+      new:
+        login: Login
