@@ -37,6 +37,7 @@ pt:
             email:
               blank: Não pode ficar em branco
               invalid: É inválido
+
   home:
     welcome_title: Bem-vindo ao Sistema de Reservas
     system_description: Aqui você pode gerenciar suas reservas e hotéis de forma fácil e eficiente!
@@ -51,6 +52,10 @@ pt:
     manage_reservations: "Ver e Gerenciar Reservas:"
     manage_reservations_option: Você pode visualizar reservas existentes, editar detalhes das reservas ou excluí-las, se necessário.
     view_reservations_button: Ver Reservas
+    title: Sistema de Reservas
+    home_button: Início
+    reservations_button: Reservas
+    hotels_button: Hotéis
 
   hotels:
     index:

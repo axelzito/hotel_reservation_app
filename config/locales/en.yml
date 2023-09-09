@@ -52,6 +52,10 @@ en:
     manage_reservations: "View and Manage Reservations:"
     manage_reservations_option: You can view existing reservations, edit reservation details, or delete reservations if necessary.
     view_reservations_button: View Reservations
+    title: Reservation System
+    home_button: Home
+    reservations_button: Reservations
+    hotels_button: Hotels
 
   hotels:
     index:

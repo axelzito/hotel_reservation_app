@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sistema de Reservas</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title><%= t('home.title') %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <%= stylesheet_link_tag 'font-awesome' %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= favicon_link_tag asset_path('hotel.png') %>
-  </head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <%= stylesheet_link_tag 'font-awesome' %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= favicon_link_tag asset_path('hotel.png') %>
+</head>
 
-  <body>
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <%= link_to root_path, class: 'navbar-brand' do %>
         <button class="btn btn-outline-primary">
-          <strong>Inicio</strong>
+          <strong><%= t('home.home_button') %></strong>
         </button>
       <% end %>
 
@@ -26,14 +24,14 @@
         <li class="nav-item">
           <%= link_to reservations_path, class: 'nav-link' do %>
             <button class="btn btn-outline-secondary">
-              <strong>Reservas</strong>
+              <strong><%= t('home.reservations_button') %></strong>
             </button>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to hotels_path, class: 'nav-link' do %>
             <button class="btn btn-outline-secondary">
-              <strong>Hoteles</strong>
+              <strong><%= t('home.hotels_button') %></strong>
             </button>
           <% end %>
         </li>
@@ -43,5 +41,4 @@
   <div class="container">
     <%= yield %>
   </div>
-  </body>
-</html>
+</body>
