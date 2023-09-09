@@ -56,6 +56,9 @@ pt:
     home_button: Início
     reservations_button: Reservas
     hotels_button: Hotéis
+    english: Inglês
+    portuguese: Português
+    spanish: Espanhol
 
   hotels:
     index:

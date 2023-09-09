@@ -13,14 +13,31 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container d-flex justify-content-between">
       <%= link_to root_path, class: 'navbar-brand' do %>
         <button class="btn btn-outline-primary">
           <strong><%= t('home.home_button') %></strong>
         </button>
       <% end %>
 
-      <ul class="navbar-nav ml-auto">
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-globe"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+          <%= link_to({ locale: :es }, class: "dropdown-item" ) do %>
+            <%= image_tag("spain_flag.png", alt: t('home.spanish'), class: "flag-icon") %> <%= t('home.spanish') %>
+          <% end %>
+          <%= link_to({ locale: :en }, class: "dropdown-item" ) do %>
+            <%= image_tag("usa_flag.png", alt: t('home.english'), class: "flag-icon") %> <%= t('home.english') %>
+          <% end %>
+          <%= link_to({ locale: :pt }, class: "dropdown-item" ) do %>
+            <%= image_tag("brazil_flag.png", alt: t('home.portuguese'), class: "flag-icon") %> <%= t('home.portuguese') %>
+          <% end %>
+        </div>
+      </div>
+
+      <ul class="navbar-nav">
         <li class="nav-item">
           <%= link_to reservations_path, class: 'nav-link' do %>
             <button class="btn btn-outline-secondary">
