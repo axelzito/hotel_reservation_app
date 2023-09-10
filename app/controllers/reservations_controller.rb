@@ -31,10 +31,10 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
+        format.html { redirect_to @reservation, notice: t('reservations.create_success') }
         format.json { render json: @reservation, status: :created }
       else
-        format.html { render :new }
+        format.html { render :new, flash: { error: t('reservations.create_error') } }
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
       end
     end
@@ -43,10 +43,10 @@ class ReservationsController < ApplicationController
   def update
     respond_to do |format|
       if @reservation.update(reservation_params)
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
+        format.html { redirect_to @reservation, notice: t('reservations.update_success') }
         format.json { render json: @reservation }
       else
-        format.html { render :edit }
+        format.html { render :edit, flash: { error: t('reservations.update_error') } }
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class ReservationsController < ApplicationController
     @reservation.destroy
 
     respond_to do |format|
-      format.html { redirect_to reservations_url, notice: 'Reservation was successfully deleted.' }
+      format.html { redirect_to reservations_url, notice: t('reservations.delete_success') }
       format.json { head :no_content }
     end
   end

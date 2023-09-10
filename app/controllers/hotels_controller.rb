@@ -31,10 +31,10 @@ class HotelsController < ApplicationController
 
     respond_to do |format|
       if @hotel.save
-        format.html { redirect_to @hotel, notice: 'Hotel was successfully created.' }
+        format.html { redirect_to @hotel, notice: t('hotels.create_success') }
         format.json { render json: @hotel, status: :created }
       else
-        format.html { render :new }
+        format.html { render :new, flash: { error: t('hotels.create_error') } }
         format.json { render json: @hotel.errors, status: :unprocessable_entity }
       end
     end
@@ -43,10 +43,10 @@ class HotelsController < ApplicationController
   def update
     respond_to do |format|
       if @hotel.update(hotel_params)
-        format.html { redirect_to @hotel, notice: 'Hotel was successfully updated.' }
+        format.html { redirect_to @hotel, notice: t('hotels.update_success') }
         format.json { render json: @hotel }
       else
-        format.html { render :edit }
+        format.html { render :edit, flash: { error: t('hotels.update_error') } }
         format.json { render json: @hotel.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class HotelsController < ApplicationController
     @hotel.destroy
 
     respond_to do |format|
-      format.html { redirect_to hotels_url, notice: 'Hotel was successfully deleted.' }
+      format.html { redirect_to hotels_url, notice: t('hotels.delete_success') }
       format.json { head :no_content }
     end
   end

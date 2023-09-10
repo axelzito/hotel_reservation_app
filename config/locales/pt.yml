@@ -100,6 +100,12 @@ pt:
       price_range_label: Faixa de Preço
       description_label: Descrição do Hotel
       submit_button: Salvar
+    create_success: Hotel criado com sucesso.
+    create_error: Falha ao criar o hotel.
+    update_success: Hotel atualizado com sucesso.
+    update_error: Falha ao atualizar o hotel.
+    delete_success: Hotel excluído com sucesso.
+    delete_error: Falha ao excluir o hotel.
 
   reservations:
     index:
@@ -144,6 +150,13 @@ pt:
       check_out: Check-out
       save_button: Salvar
       back_to_list: Voltar para a Lista
+    create_success: Reserva criada com sucesso.
+    create_error: Falha ao criar a reserva.
+    update_success: Reserva atualizada com sucesso.
+    update_error: Falha ao atualizar a reserva.
+    delete_success: Reserva excluída com sucesso.
+    delete_error: Falha ao excluir a reserva.
+
   devise:
     sessions:
       new:

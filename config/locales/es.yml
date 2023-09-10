@@ -100,6 +100,12 @@ es:
       price_range_label: Rango de Precios
       description_label: Descripción del Hotel
       submit_button: Guardar
+    create_success: El hotel se creó con éxito.
+    create_error: No se pudo crear ll hotel.
+    update_success: El hotel se actualizó con éxito.
+    update_error: No se pudo actualizar ll hotel.
+    delete_success: El hotel se eliminó con éxito.
+    delete_error: No se pudo eliminar ll hotel.
 
   reservations:
     index:
@@ -144,6 +150,13 @@ es:
       check_out: Check-out
       save_button: Guardar
       back_to_list: Volver a la Lista
+    create_success: La reserva se creó con éxito.
+    create_error: No se pudo crear la reserva.
+    update_success: La reserva se actualizó con éxito.
+    update_error: No se pudo actualizar la reserva.
+    delete_success: La reserva se eliminó con éxito.
+    delete_error: No se pudo eliminar la reserva.
+
   devise:
     sessions:
       new:

@@ -100,6 +100,12 @@ en:
       price_range_label: Price Range
       description_label: Hotel Description
       submit_button: Save
+    create_success: Hotel was successfully created.
+    create_error: Failed to create hotel.
+    update_success: Hotel was successfully updated.
+    update_error: Failed to update hotel.
+    delete_success: Hotel was successfully deleted.
+    delete_error: Failed to delete hotel.
 
   reservations:
     index:
@@ -144,6 +150,13 @@ en:
       check_out: Check-out
       save_button: Save
       back_to_list: Back to List
+    create_success: Reservation was successfully created.
+    create_error: Failed to create reservation.
+    update_success: Reservation was successfully updated.
+    update_error: Failed to update reservation.
+    delete_success: Reservation was successfully deleted.
+    delete_error: Failed to delete reservation.
+
   devise:
     sessions:
       new:
